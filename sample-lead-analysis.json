@@ -1,0 +1,22 @@
+{
+  "workflow_id": "demo_workflow_001",
+  "url": "https://example.com",
+  "business_name": "Example Local Services",
+  "location": "Kansas City, MO",
+  "website_score": 61,
+  "confidence": 0.68,
+  "pain_points": [
+    "No obvious online booking or scheduling path detected.",
+    "Limited visible social proof or customer testimonial language.",
+    "Primary call-to-action could be stronger."
+  ],
+  "opportunities": [
+    "Add a clearer above-the-fold value proposition.",
+    "Create stronger service-specific sections or landing pages.",
+    "Add trust signals such as testimonials, recent work, guarantees, or review highlights.",
+    "Improve local SEO with city/service keywords and structured business information.",
+    "Add a low-friction contact or quote request flow."
+  ],
+  "recommended_offer": "Website conversion and local visibility audit with a practical improvement roadmap.",
+  "status": "pending_review"
+}
