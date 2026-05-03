@@ -1,223 +1,119 @@
 # Agentic Lead Intel System
 
-A deployable AI workflow MVP that turns a local business website URL into a structured lead profile, web presence assessment, memory record, and human-reviewed outreach draft.
+A deployed agentic AI workflow that turns a local business website URL into structured lead intelligence, web presence assessment, persistent memory, and a human-reviewed outreach draft.
 
-This project is designed as recruiter-facing proof of work for agentic AI implementation roles. It demonstrates scraping, agent orchestration, reasoning, persistent memory, human-in-the-loop review, and business-action generation.
+This is recruiter-facing proof of real AI system implementation — not a prompt demo.
+
+---
+
+## Live Demo
+
+Frontend Dashboard: [PASTE YOUR LOVABLE URL HERE]  
+Backend API: https://agentic-lead-intel-system.onrender.com  
+
+Health check:
+GET /health → confirms system is live
+
+---
+
+## What This Does (In 10 Seconds)
+
+Enter a business website →  
+AI analyzes web presence →  
+System identifies opportunities →  
+Stores structured lead intelligence →  
+Generates human-reviewed outreach  
+
+This is a deployable agentic workflow, not text generation.
 
 ---
 
 ## Live Workflow
 
-```mermaid
-flowchart TD
-    A[Website URL Input] --> B[Scraper API]
-    B --> C[Agent Layer: OpenClaw-style Controller]
-    C --> D[Reasoning Layer: Hermes-style Evaluator]
-    D --> E[Memory: Supabase + Obsidian Markdown]
-    E --> F[Interface: View Pro / Lovable Dashboard]
-    F --> G[Human Review]
-    G --> H[Action: Outreach Draft]
-```
+Scraper → Agent Layer → Reasoning → Memory → Interface → Human Review → Outreach
 
 ---
 
-## What This Proves
+## Why This Matters
 
-This system shows that the builder understands:
+Most AI projects stop at text generation.
 
-- Agentic workflow design
-- Tool-using AI systems
-- Web scraping for business intelligence
-- Human-in-the-loop approval
-- Persistent operational memory
-- Structured JSON outputs
-- Recruiter-readable technical documentation
-- Deployment-ready backend architecture
-- Business outcome mapping
+This system:
+• Connects tools (scraping, APIs)  
+• Uses structured reasoning  
+• Persists memory  
+• Includes human approval  
+• Produces business-ready outputs  
+• Is deployed on live infrastructure  
+
+This is how AI is actually implemented in real systems.
 
 ---
 
 ## Core Use Case
 
-A user enters a business website URL.
+Input: Business website URL  
 
-The system:
-
-1. Scrapes the page.
-2. Extracts business identity signals.
-3. Scores website quality.
-4. Identifies improvement opportunities.
-5. Generates a structured lead profile.
-6. Saves the profile to persistent memory.
-7. Creates an Obsidian-style markdown note.
-8. Drafts outreach for human review.
-9. Exposes everything through a clean API for a frontend dashboard.
+System:
+1. Ingests page content  
+2. Routes through agent controller  
+3. Applies reasoning layer  
+4. Scores web presence  
+5. Identifies missed opportunities  
+6. Stores structured lead  
+7. Generates outreach draft  
+8. Exposes via API  
 
 ---
 
 ## Tech Stack
 
-| Layer | Implementation |
-|---|---|
-| Interface | Lovable / View Pro frontend |
-| Backend | Node.js + Express |
-| Scraper | Firecrawl API, with local fallback |
-| Agent Layer | OpenClaw-style orchestration controller |
-| Reasoning | OpenAI-compatible API, with deterministic fallback |
-| Memory | Supabase Postgres |
-| Markdown Memory | Obsidian-style generated notes |
-| Deployment | Render, Railway, or Vercel-compatible backend |
-| Portfolio | GitHub README + demo script |
+Frontend: Lovable / View Pro  
+Backend: Node.js + Express  
+Memory: Supabase  
+Deployment: Render  
+Reasoning: OpenAI-compatible / fallback logic  
+Architecture: Agent-based orchestration  
 
 ---
 
-## Repository Structure
+## Render Deployment (Live)
 
-```text
-agentic-lead-intel-system/
-├── backend/
-│   ├── src/
-│   │   ├── agents.js
-│   │   ├── config.js
-│   │   ├── memory.js
-│   │   ├── reasoning.js
-│   │   ├── scraper.js
-│   │   ├── server.js
-│   │   └── validators.js
-│   ├── package.json
-│   ├── .env.example
-│   └── README.md
-├── supabase/
-│   └── schema.sql
-├── lovable/
-│   └── lovable-prompt.md
-├── docs/
-│   ├── architecture.md
-│   ├── deployment-ipad.md
-│   ├── recruiter-demo-script.md
-│   └── security-and-ethics.md
-├── sample-output/
-│   ├── sample-lead-analysis.json
-│   └── sample-obsidian-note.md
-└── README.md
-```
+Runtime: Node  
+Root Directory: Backend  
+Build Command: npm install  
+Start Command: node server.js  
 
 ---
 
-## API Endpoints
+## API
 
-### Health Check
-
-```http
-GET /health
-```
-
-### Run Full Lead Analysis
-
-```http
-POST /api/analyze
-Content-Type: application/json
-
-{
-  "url": "https://example-business.com",
-  "businessName": "Example Business",
-  "location": "Kansas City, MO"
-}
-```
-
-### List Leads
-
-```http
-GET /api/leads
-```
-
-### Read One Lead
-
-```http
-GET /api/leads/:id
-```
-
-### Approve Outreach Draft
-
-```http
-POST /api/leads/:id/approve
-```
+POST /api/analyze → run analysis  
+GET /api/leads → view stored leads  
+POST /api/leads/:id/approve → approve outreach  
 
 ---
 
-## Environment Variables
+## Recruiter Narrative
 
-Copy `backend/.env.example` to `.env`.
+“This system demonstrates how AI can be applied to real business workflows.  
+It ingests a website, routes through an agent layer, applies reasoning, stores memory, and produces an actionable outreach draft.  
 
-```bash
-PORT=3000
-NODE_ENV=development
-
-SUPABASE_URL=
-SUPABASE_SERVICE_ROLE_KEY=
-
-FIRECRAWL_API_KEY=
-
-OPENAI_API_KEY=
-OPENAI_MODEL=gpt-4.1-mini
-OPENAI_BASE_URL=https://api.openai.com/v1
-
-DEMO_MODE=true
-```
-
-If API keys are missing, the app still runs in demo mode using deterministic fallback logic. This makes it safe for recruiters to test without breaking the demo.
+The key is that it coordinates tools, reasoning, memory, and human review — not just prompts.”
 
 ---
 
-## Recruiter Demo Narrative
+## Resume Bullet
 
-> “This is an AI lead intelligence workflow. It scrapes a business website, routes the content through an agent controller, applies a reasoning layer to identify business opportunities, stores the analysis as memory, and generates a human-reviewed outreach draft. I designed the system to show practical agentic implementation, not just prompting.”
-
----
-
-## Quick Start
-
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-Then test:
-
-```bash
-curl http://localhost:3000/health
-```
-
-Run an analysis:
-
-```bash
-curl -X POST http://localhost:3000/api/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"url":"https://example.com","businessName":"Example Business","location":"Kansas City, MO"}'
-```
-
----
-
-## Deployment
-
-See [`docs/deployment-ipad.md`](docs/deployment-ipad.md).
-
----
-
-## Design Philosophy
-
-The system is intentionally modular:
-
-- The scraper can be swapped from Firecrawl to Apify, Browserless, Playwright, or native fetch.
-- The reasoning model can be OpenAI, OpenRouter, local Hermes, or any OpenAI-compatible endpoint.
-- The memory layer can be Supabase, Obsidian markdown, or both.
-- The interface can be Lovable, View Pro, Next.js, or Retool.
-
-That modularity is the point: this is not a toy prompt chain. It is an implementation pattern for AI-orchestrated business workflows.
+Built and deployed a full-stack agentic AI system that transforms business websites into structured lead intelligence using Node.js, Supabase, Render, and a frontend dashboard.
 
 ---
 
 ## Status
 
-MVP-ready. Built for recruiter demonstration, live deployment, and future extension.
+Live MVP  
+Backend deployed  
+Database connected  
+Lead generation confirmed  
+
+Next step: frontend polish and demo presentation
