@@ -8,7 +8,7 @@ This is recruiter-facing proof of real AI system implementation — not a prompt
 
 ## Live Demo
 
-Frontend Dashboard: [PASTE YOUR LOVABLE URL HERE]  
+Frontend Dashboard: https://openclaw-view-pro.lovable.app
 Backend API: https://agentic-lead-intel-system.onrender.com  
 
 Health check:
