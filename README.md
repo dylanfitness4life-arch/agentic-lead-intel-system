@@ -9,11 +9,10 @@ This is recruiter-facing proof of real AI system implementation — not a prompt
 ## Live Demo
 
 Frontend Dashboard: https://openclaw-view-pro.lovable.app
-Backend API: https://agentic-lead-intel-system.onrender.com  
+Backend API: https://agentic-lead-intel-system.onrender.com
 
-Health check:
-GET /health → confirms system is live
-
+Health Check (Live):
+https://agentic-lead-intel-system.onrender.com/health
 ---
 
 ## What This Does (In 10 Seconds)
